@@ -1,0 +1,86 @@
+.container {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  overflow-y: scroll;
+}
+
+.simple-text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 21px;
+  color: #adbfc7;
+}
+
+.list {
+  list-style: none;
+  text-align: left;
+}
+
+.list-item {
+  font-family: 'Roboto Mono', monospace;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+
+  color: #fff;
+  margin: 0 auto 21px 22px;
+}
+
+.list-item::before {
+  display: inline-block;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 22px;
+  height: 26px;
+  width: 26px;
+  
+  color: #000;
+  font-size: 17px;
+}
+
+.list-item--string::before {
+  font-family: 'Roboto Mono', monospace;
+  content: "“";
+  background-color: #ffe177;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+.list-item--boolean::before {
+  content: "tf";
+  background-color: #b1c7ff;
+}
+
+.list-item--number::before {
+  content: "#";
+  background-color: #1cddb4;
+}
+
+.value-string {
+  color: #ffe177;
+}
+
+.value-boolean {
+  color: #b1c7ff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.value-number {
+  color: #1cddb4;
+}
+
+@media (max-width: 420px) {
+  .list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+.list-item::before {
+    display: none;
+  }
+}
